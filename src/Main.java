@@ -29,5 +29,6 @@ public class Main {
         System.out.println("Подсчет шагов - 1");
         System.out.println("Изменение цели - 2");
         System.out.println("Вывод статистики за месяц - 3");
+        System.out.println("Выход - 0");
     }
 }

@@ -36,11 +36,14 @@ public class MonthData {
             if (goalByStepsPerDay < days[i]) {
                 currentSeries++;
             } else {
-                if (finalSeries < currentSeries) {
-                    finalSeries = currentSeries;
-                }
                 currentSeries = 0;
             }
+            finalSeries = Math.max(finalSeries, currentSeries); //Дали совет почитать про данный класс попробовал сделать так
+            // Но можно и так)
+            /*
+            if (currentSeries > finalSeries) {
+                finalSeries = currentSeries;
+            } */
         }
         return finalSeries;
     }
