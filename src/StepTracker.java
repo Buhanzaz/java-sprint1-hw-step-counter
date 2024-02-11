@@ -5,7 +5,6 @@ public class StepTracker {
     MonthData[] monthToData = new MonthData[12];
     int goalByStepsPerDay = 10000;
 
-
     StepTracker(Scanner scan) {
         scanner = scan;
 
@@ -26,21 +25,21 @@ public class StepTracker {
             System.out.println("Статистика по дням");
             monthData.printDaysAndStepsFromMonth();
             System.out.println("Сумма шагов за месяц: " + monthData.sumStepsFromMonth());
-            System.out.println("Максимальное колличество шагов за месяц: " + monthData.maxSteps());
+            System.out.println("Максимальное количество шагов за месяц: " + monthData.maxSteps());
             System.out.println("В среднем вы проходили: " + (sumSteps) / monthData.days.length);
             System.out.println("Вы прошли за месяц: " + converter.convertToKm(sumSteps) + "Км");
-            System.out.println("Киллоколорий созжено за месяц: " + converter.convertStepsToKilocalories(sumSteps) + "Ккал");
+            System.out.println("Килокалорий сожжено за месяц: " + converter.convertStepsToKilocalories(sumSteps) + "Ккал");
             System.out.println("Вывод лучшей серии: " + monthData.bestSeries(goalByStepsPerDay));
             System.out.println();
         }
     }
 
-    //Сhange step goal
+    //Change step goal
     void changeStepGoal() {
         while (true){
             int changeStep = scanner.nextInt();
             if (changeStep <= 0) {
-                System.out.println("Вы не моожете ввести число меньшее или равное нулю!");
+                System.out.println("Вы не можете ввести число меньшее или равное нулю!");
             } else {
                 System.out.println("Вы изменили значение шагов с " + goalByStepsPerDay +" на " + changeStep);
                 goalByStepsPerDay = changeStep;
@@ -67,7 +66,7 @@ public class StepTracker {
                     int step = scanner.nextInt();
 
                     if (step < 0) {
-                        System.out.println("Значение не может быть отрецательным");
+                        System.out.println("Значение не может быть отрицательным");
                     } else {
                         MonthData monthData = monthToData[month - 1];
                         monthData.days[day - 1] = step;

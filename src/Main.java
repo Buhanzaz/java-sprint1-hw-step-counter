@@ -2,7 +2,6 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args){
         StepTracker stepTracker = new StepTracker(new Scanner(System.in));
-        MonthData monthData = new MonthData();
         Scanner scanner = new Scanner(System.in);
 
         //Control unit and menu output

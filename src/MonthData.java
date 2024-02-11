@@ -10,7 +10,6 @@ public class MonthData {
 
     //Sum of steps per month
     int sumStepsFromMonth() {
-        //int sum = Arrays.stream(days).sum();
         int sumStep = 0;
         for (int i = 0; i < days.length; i++){
             sumStep += days[i];
@@ -38,12 +37,7 @@ public class MonthData {
             } else {
                 currentSeries = 0;
             }
-            finalSeries = Math.max(finalSeries, currentSeries); //Дали совет почитать про данный класс попробовал сделать так
-            // Но можно и так)
-            /*
-            if (currentSeries > finalSeries) {
-                finalSeries = currentSeries;
-            } */
+            finalSeries = Math.max(finalSeries, currentSeries);
         }
         return finalSeries;
     }
